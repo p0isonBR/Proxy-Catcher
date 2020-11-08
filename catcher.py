@@ -85,7 +85,7 @@ try:
     elif site==2:
         print('Ainda nao disponivel')
 
-    print(len(open(lista).readlines())+' proxies salvas em '+lista)
+    print(str(len(open(lista).readlines())))+' proxies salvas em '+lista)
 
 except(KeyboardInterrupt):
     print('Interrompido pelo usuãrio')
