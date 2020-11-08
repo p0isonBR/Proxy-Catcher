@@ -78,7 +78,7 @@ try:
                 with open(lista, 'a+') as socks4:
                     socks4.write(proxys)
             elif tipo==3:
-                proxys=requests.get('https://api.proxyscrape.com/v2/?request=getproxies&protocol=socks5&timeout=10000&country=all')
+                proxys=requests.get('https://api.proxyscrape.com/v2/?request=getproxies&protocol=socks5&timeout=10000&country=all').text
                 proxys=proxys.replace('\n', '')
                 with open(lista, 'a+') as socks5:
                     socks5.write(proxys)
