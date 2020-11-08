@@ -62,8 +62,8 @@ try:
             elif tipo==2:
                 proxys=requests.get('https://api.proxyscrape.com/v2/?request=getproxies&protocol=socks4&timeout=10000&country=BR&simplified=true').text
                 proxys=proxys.replace('\n', '')
-                with open(lista, 'a+') as http:
-                    http.write(proxys)
+                with open(lista, 'a+') as socks4:
+                    socks4.write(proxys)
             elif tipo==3:
                 print('Proxies Socks5 não disponiveis no Pais')
         elif pais==2:
@@ -75,13 +75,13 @@ try:
             elif tipo==2:
                 proxys=requests.get('https://api.proxyscrape.com/v2/?request=getproxies&protocol=socks4&timeout=10000&country=all&simplified=true').text
                 proxys=proxys.replace('\n', '')
-                with open(lista, 'a+') as http:
-                    http.write(proxys)
+                with open(lista, 'a+') as socks4:
+                    socks4.write(proxys)
             elif tipo==3:
                 proxys=requests.get('https://api.proxyscrape.com/v2/?request=getproxies&protocol=socks5&timeout=10000&country=all')
                 proxys=proxys.replace('\n', '')
-                with open(lista, 'a+') as http:
-                    http.write(proxys)
+                with open(lista, 'a+') as socks5:
+                    socks5.write(proxys)
     elif site==2:
         print('Ainda nao disponivel')
 
