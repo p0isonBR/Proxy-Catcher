@@ -59,13 +59,11 @@ try:
                 proxys=proxys.replace('\n', '')
                 with open(lista, 'a+') as http:
                     http.write(proxys)
-                    print('Proxys salvas em: '+lista)
             elif tipo==2:
                 proxys=requests.get('https://api.proxyscrape.com/v2/?request=getproxies&protocol=socks4&timeout=10000&country=BR&simplified=true').text
                 proxys=proxys.replace('\n', '')
                 with open(lista, 'a+') as http:
                     http.write(proxys)
-                    print('Proxys salvas em: '+lista)
             elif tipo==3:
                 print('Proxies Socks5 não disponiveis no Pais')
         elif pais==2:
@@ -74,21 +72,21 @@ try:
                 proxys=proxys.replace('\n', '')
                 with open(lista, 'a+') as http:
                     http.write(proxys)
-                    print('Proxys salvas em: '+lista)
             elif tipo==2:
                 proxys=requests.get('https://api.proxyscrape.com/v2/?request=getproxies&protocol=socks4&timeout=10000&country=all&simplified=true').text
                 proxys=proxys.replace('\n', '')
                 with open(lista, 'a+') as http:
                     http.write(proxys)
-                    print('Proxys salvas em: '+lista)
             elif tipo==3:
                 proxys=requests.get('https://api.proxyscrape.com/v2/?request=getproxies&protocol=socks5&timeout=10000&country=all')
                 proxys=proxys.replace('\n', '')
                 with open(lista, 'a+') as http:
                     http.write(proxys)
-                    print('Proxys salvas em: '+lista)
     elif site==2:
         print('Ainda nao disponivel')
+
+print(len(open(lista).readlines())+' proxies salvas em '+lista)
+
 except(KeyboardInterrupt):
     print('Interrompido pelo usuãrio')
     exit('Ctrl+C')
