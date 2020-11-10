@@ -92,7 +92,7 @@ try:
 
     lista=input(f'\n{C}[{G}+{C}] defina um nome para a lista: {B}')
     lista=lista+'.txt'
-    print(f'{C}[{G}!{C}] Baixando lista de proxies...{C}')
+    print(f'{C}[{G}!{C}] Baixando lista de proxies...{C}\n')
     if pais==1:
         if tipo==1:
             proxys=requests.get('https://api.proxyscrape.com/v2/?request=getproxies&protocol=http&timeout=10000&country=BR&ssl=all&anonymity=all&simplified=true').text
@@ -124,9 +124,9 @@ try:
             with open(lista, 'a+') as socks5:
                 socks5.write(proxys)
                 
-    print(\nB+str(len(open(lista).readlines()))+C+' proxies salvas em '+B+lista+C)
+    print(B+str(len(open(lista).readlines()))+C+' proxies salvas em '+B+lista+C)
     print(f'\n{C}Me acompanhe no Github: {G}https://github.com/p0isonBR{C}')
 
 except(KeyboardInterrupt):
-    print(f'\n{C}[{R}!{C}] Interrompido pelo usuãrio!')
+    print(f'\n{C}[{R}!{C}] Interrompido pelo usuário!')
     exit(f'{R}Ctrl+C pressionado{C}')
