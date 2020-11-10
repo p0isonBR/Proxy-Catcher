@@ -124,8 +124,8 @@ try:
             with open(lista, 'a+') as socks5:
                 socks5.write(proxys)
                 
-    print(B+str(len(open(lista).readlines()))+' proxies salvas em '+B+lista+C)
-    print(f'{C}Me acompanhe no Github: {G}https://github.com/p0isonBR{C}')
+    print(B+str(len(open(lista).readlines()))+C+' proxies salvas em '+B+lista+C)
+    print(f'\n{C}Me acompanhe no Github: {G}https://github.com/p0isonBR{C}')
 
 except(KeyboardInterrupt):
     print(f'\n{C}[{R}!{C}] Interrompido pelo usuãrio!')
