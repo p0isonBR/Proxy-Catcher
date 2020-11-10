@@ -56,6 +56,7 @@ print(f'''{G}*By PoisonBR
 ''')
 try:
     print(f'''{C}[{G}!{C}] Escolha o tipo de proxy:
+    
 [{G}1{C}] HTTP/HTTPs
 [{G}2{C}] Socks4
 [{G}3{C}] Socks5
@@ -74,6 +75,7 @@ try:
     try:
         print(f'''
 {C}[{G}!{C}] Selecione o país:
+
 [{G}1{C}] Brasil
 [{G}2{C}] Todos os paises
 ''' )
@@ -88,7 +90,7 @@ try:
             print(f'{C}[{R}-{C}] Opção invalida.')
             pais=int(input(f'{C}[{G}+{C}] Selecione o país: {B}'))
 
-    lista=input(f'{C}[{G}+{C}] defina um nome para a lista: {B}')
+    lista=input(f'\n{C}[{G}+{C}] defina um nome para a lista: {B}')
     lista=lista+'.txt'
     print(f'{C}[{G}!{C}] Baixando lista de proxies...{C}')
     if pais==1:
@@ -121,7 +123,7 @@ try:
             with open(lista, 'a+') as socks5:
                 socks5.write(proxys)
                 
-    print(str(len(open(lista).readlines()))+' proxies salvas em '+{B}+lista+{C})
+    print(str(len(open(lista).readlines()))+' proxies salvas em '+B+lista+{C})
 
 except(KeyboardInterrupt):
     print(f'\n{C}[{R}!{C}] Interrompido pelo usuãrio!')
