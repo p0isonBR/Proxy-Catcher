@@ -72,7 +72,8 @@ try:
             print(f'{C}[{R}-{C}] Opção invalida.')
             tipo=int(input(f'{C}[{G}+{C}] Escolha uma opção: {B}'))
     try:
-        print(f'''{C}[{G}!{C}] Selecione o país:
+        print(f'''
+{C}[{G}!{C}] Selecione o país:
 [{G}1{C}] Brasil
 [{G}2{C}] Todos os paises
 ''' )
@@ -123,5 +124,5 @@ try:
     print(str(len(open(lista).readlines()))+' proxies salvas em '+{B}+lista+{C})
 
 except(KeyboardInterrupt):
-    print(f'{C}[{R}!{C}] Interrompido pelo usuãrio!')
+    print(f'\n{C}[{R}!{C}] Interrompido pelo usuãrio!')
     exit(f'{R}Ctrl+C pressionado{C}')
