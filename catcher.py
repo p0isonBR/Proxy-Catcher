@@ -123,7 +123,7 @@ try:
             with open(lista, 'a+') as socks5:
                 socks5.write(proxys)
                 
-    print(str(len(open(lista).readlines()))+' proxies salvas em '+B+lista+{C})
+    print(str(len(open(lista).readlines()))+' proxies salvas em '+B+lista+C)
 
 except(KeyboardInterrupt):
     print(f'\n{C}[{R}!{C}] Interrompido pelo usuãrio!')
