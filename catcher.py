@@ -106,6 +106,7 @@ try:
                 socks4.write(proxys)
         elif tipo==3:
             print(f'{C}[{R}!{C}] Proxies Socks5 não disponiveis no Pais')
+            exit()
     elif pais==2:
         if tipo==1:
             proxys=requests.get('https://api.proxyscrape.com/v2/?request=getproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all&simplified=true').text
